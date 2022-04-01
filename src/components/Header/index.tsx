@@ -7,7 +7,7 @@ export function Header(): JSX.Element {
     <header className={styles.headerContainer}>
       <Link href="/">
         <a>
-          <img src="/images/Logo.svg" alt="spacetraveling" />
+          <img src="/images/Logo.svg" alt="logo" />
         </a>
       </Link>
     </header>
