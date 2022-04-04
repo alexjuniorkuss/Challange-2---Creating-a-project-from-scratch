@@ -114,23 +114,23 @@ export default function Post({
                 <span>
                   * editado em{' '}
                   <time>
-                    {format(
+                    {/* {format(
                       new Date(post.last_publication_date),
                       'dd MMM yyyy',
                       {
                         locale: ptBR,
                       }
-                    )}
+                    )} */}
                   </time>
                   , às{' '}
                   <time>
-                    {format(
+                    {/* {format(
                       new Date(post.last_publication_date),
                       `${'HH'}:${'mm'}`,
                       {
                         locale: ptBR,
                       }
-                    )}
+                    )} */}
                   </time>
                 </span>
               </div>
@@ -152,20 +152,20 @@ export default function Post({
           </article>
           <footer className={styles.navigationController}>
             <div>
-              {prevPost && (
-                <Link href={`/post/${prevPost.uid}`}>
+              {nextPost && (
+                <Link href={`/post/${nextPost.uid}`}>
                   <a>
-                    <h4>{prevPost.data.title}</h4>
+                    <h4>{nextPost.data.title}</h4>
                     <span>Post anterior</span>
                   </a>
                 </Link>
               )}
             </div>
             <div>
-              {nextPost && (
-                <Link href={`/post/${nextPost.uid}`}>
+              {prevPost && (
+                <Link href={`/post/${prevPost.uid}`}>
                   <a>
-                    <h4>{nextPost.data.title}</h4>
+                    <h4>{prevPost.data.title}</h4>
                     <span>Próximo post</span>
                   </a>
                 </Link>
